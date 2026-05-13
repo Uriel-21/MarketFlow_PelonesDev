@@ -1,5 +1,9 @@
 # Primero descargamos la imagen 8.4 de PHP
 FROM php:8.4-apache
+
+# Haber si funcioan esto;.....
+RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
+
 #Instalamos dependencias que puede llegar a ocupar el sistema
 RUN apt-get update && apt-get install -y \
     git \
